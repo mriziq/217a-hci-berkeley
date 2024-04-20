@@ -28,7 +28,7 @@ const Chat = () => {
         throw new Error(data.error || 'An error occurred while fetching the data');
       }
       setMessages(prevMessages => [...prevMessages, { type: 'received', text: data.data }]);
-    } catch (err) {
+    } catch (err: any) {
       toast({
         title: "Error",
         description: err.message,

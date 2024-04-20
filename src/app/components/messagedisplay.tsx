@@ -4,8 +4,12 @@
 import React, { useEffect, useRef } from 'react';
 import { VStack, Text, Box, Avatar, HStack } from '@chakra-ui/react';
 import { format } from 'date-fns';
+import { Message } from './types';  // Adjust the path as necessary
 
-// Utility to parse dates safely
+interface MessageDisplayProps {
+  messages: Message[];
+}
+
 const parseISODate = (dateString: string): Date => {
   const timestamp = Date.parse(dateString);
   if (!isNaN(timestamp)) {
@@ -13,14 +17,6 @@ const parseISODate = (dateString: string): Date => {
   }
   return new Date(); // Return current date as fallback
 };
-
-interface MessageDisplayProps {
-  messages: {
-    type: 'sent' | 'received';
-    text: string;
-    timestamp: string; // Assuming timestamp could be a string from server
-  }[];
-}
 
 const MessageDisplay: React.FC<MessageDisplayProps> = ({ messages }) => {
   const endOfMessagesRef = useRef<HTMLDivElement>(null);
@@ -45,7 +41,7 @@ const MessageDisplay: React.FC<MessageDisplayProps> = ({ messages }) => {
           <Avatar
             name={message.type === 'sent' ? 'You' : 'ChatGPT'}
             size="sm"
-            src={message.type === 'sent' ? '/path-to-your-avatar.jpg' : '/path-to-chatgpt-avatar.jpg'} // Add paths to your avatar images
+            src={message.type === 'sent' ? '/path-to-your-avatar.jpg' : '/path-to-chatgpt-avatar.jpg'}
           />
           <VStack align="start">
             <Text fontSize="xs" fontWeight="bold" opacity="0.9">
@@ -55,7 +51,7 @@ const MessageDisplay: React.FC<MessageDisplayProps> = ({ messages }) => {
               {message.text}
             </Text>
             <Text fontSize="xs" opacity="0.6">
-              {format(parseISODate(message.timestamp), 'p')}
+            {format(parseISODate(message.timestamp), 'p')}
             </Text>
           </VStack>
         </HStack>

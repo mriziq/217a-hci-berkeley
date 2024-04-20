@@ -1,21 +1,21 @@
-// Chat.tsx
-"use client"
 import React, { useState } from 'react';
 import PromptInput from './promptinput';
 import MessageDisplay from './messagedisplay';
-import { Flex, Box, Heading, useToast, VStack } from '@chakra-ui/react';
+import { Flex, Box, VStack } from '@chakra-ui/react';
+import { Message } from './types';  // Ensure this path matches where your Message type is defined
 
 const Chat = () => {
-  const [messages, setMessages] = useState<{ type: 'sent' | 'received'; text: string }[]>([]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const toast = useToast();
 
   const handleSendMessage = async (prompt: string) => {
+    const currentTime = new Date().toISOString(); // Current time as ISO string for the timestamp
     setIsLoading(true);
-    setMessages(prevMessages => [...prevMessages, { type: 'sent', text: prompt }]);
+    // Append new sent message with timestamp
+    setMessages(prevMessages => [...prevMessages, { type: 'sent', text: prompt, timestamp: currentTime }]);
 
     try {
-      const res = await fetch('/api/chat', {
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -23,20 +23,15 @@ const Chat = () => {
         body: JSON.stringify({ prompt }),
       });
 
-      const data = await res.json();
-      if (!res.ok) {
+      const data = await response.json();
+      if (!response.ok) {
         throw new Error(data.error || 'An error occurred while fetching the data');
       }
-      setMessages(prevMessages => [...prevMessages, { type: 'received', text: data.data }]);
-    } catch (err: any) {
-      toast({
-        title: "Error",
-        description: err.message,
-        status: "error",
-        duration: 9000,
-        isClosable: true,
-        position: "bottom-left"
-      });
+      // Append new received message with timestamp
+      setMessages(prevMessages => [...prevMessages, { type: 'received', text: data.data, timestamp: currentTime }]);
+    } catch (err) {
+      // Error handling could be improved here if needed
+      console.error("Error sending message:", err);
     } finally {
       setIsLoading(false);
     }

@@ -31,3 +31,16 @@ body {
     text-wrap: balance;
   }
 }
+
+.custom-shepherd .shepherd-content {
+  background-color: white; /* Solid white background */
+  border: 1px solid black; /* Thin black border */
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-shepherd .shepherd-text {
+  color: black; /* Ensuring text is black for better contrast */
+  padding: 25px; /* Adds padding around the text */
+  font-size: 18px;
+}

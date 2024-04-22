@@ -6,6 +6,7 @@ import { Box, Button, VStack, Heading, Divider, Text, useColorModeValue } from '
 import MetricsDisplay from './metricdisplay';
 import WorldDisplay from './worlddisplay';
 import { SidebarProps } from './types'
+import ReliabilityStatusIndicator from './ReliabilityStatusIndicator';
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   // Optional: Use color mode value for better theme adaptability
@@ -28,7 +29,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     >
       <VStack align="stretch" spacing={4}>
       <Button bg="white" variant="solid"  onClick={onClose}>Close</Button>
-        
+      <ReliabilityStatusIndicator />
         <Heading size="lg">Assumptions</Heading>
         
         <Divider />

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { VStack, Text, HStack } from '@chakra-ui/react';
 import { format } from 'date-fns';
 import { Message } from './types';
-import ClickableAvatar from './clickableavatar';
+import ClickableAvatar from './avatar';
 import Sidebar from './sidebar'; // Ensure you have this Sidebar component
 
 interface MessageDisplayProps {

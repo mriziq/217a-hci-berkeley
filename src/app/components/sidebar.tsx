@@ -27,19 +27,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       overflowY="auto"  // Make sidebar scrollable
     >
       <VStack align="stretch" spacing={4}>
-      <Button colorScheme="blue" onClick={onClose}>Close</Button>
+      <Button bg="white" variant="solid"  onClick={onClose}>Close</Button>
         
-        <Heading size="md">Assumptions</Heading>
+        <Heading size="lg">Assumptions</Heading>
         
         <Divider />
 
-        <Text fontSize="sm">These responses are based on the latest response.</Text>
+        <Text fontSize="sm">These responses change and are based on the latest response.</Text>
         <WorldDisplay />
 
-        <Divider my={4} />
+        {/* <Divider my={4} /> */}
 
-        <Heading size="md">Status</Heading>
-        <Text fontSize="sm">These responses are based on the latest response.</Text>
+        <Heading size="lg">Status</Heading>
         <MetricsDisplay/>
       
       </VStack>

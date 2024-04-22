@@ -31,7 +31,7 @@ const MetricRow: React.FC<MetricProps> = ({ label, yesPercentage }) => {
 
 const MetricsDisplay = () => {
     return (
-        <VStack spacing={2} border="1px" borderColor="gray.200" borderRadius="lg" align="left">
+        <VStack spacing={1} border="1px" borderColor="gray.200" borderRadius="lg" align="left">
             <MetricRow label="Rule-Following" yesPercentage={70} />
             <MetricRow label="Confidence" yesPercentage={55} />
             <MetricRow label="Sycophancy" yesPercentage={30} />

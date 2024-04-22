@@ -32,13 +32,11 @@ const WorldDisplay = () => {
             <WorldMetricRow label={labels.gender} confidencePercentage={92} />
             <WorldMetricRow label={labels.age} confidencePercentage={85} />
             <WorldMetricRow label={labels.location} confidencePercentage={78} />
-            <VStack spacing={2} align="left" p={4}>
+            <VStack spacing={0} align="left" p={4}>
                 <Text fontSize="lg" fontWeight="bold">About You</Text>
                 <VStack spacing={2}>
                     <Box w="100%" pl="5px" h="60px" bg="gray.500" borderRadius="md">Education Level
                     <Text fontWeight={"bold"}>Post-Graduate</Text></Box>
-                    {/* <Box w="100%" pl="5px" h="60px" bg="gray.500" borderRadius="md">Activity Level
-                    <Text fontWeight={"bold"}>Writing an essay</Text></Box> */}
                     <Box w="100%" pl="5px" h="60px" bg="gray.500" borderRadius="md">Currently
                     <Text fontWeight={"bold"}>Writing an essay</Text>
                     </Box>

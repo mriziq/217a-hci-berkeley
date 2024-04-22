@@ -73,8 +73,8 @@ const Chat = () => {
     };
 
     return (
-        <VStack spacing={0} height="90vh">
-            <Flex flex="1" w="100%" p="2" direction="column" overflow="hidden">
+        <VStack spacing={1} height="90vh">
+            <Flex flex="1" w="90%" p="2" direction="column" overflow="hidden">
                 <MessageDisplay messages={messages} chatGPTColor={color} />
             </Flex>
             <Box p="2" bg="white" w="100%">

@@ -7,12 +7,18 @@ import { Avatar, AvatarProps } from '@chakra-ui/react';
 interface ClickableAvatarProps extends AvatarProps {
   sender: 'You' | 'ChatGPT';
   avatarPath: string;
-  avatarColor?: string; // Optional color for the avatar background
-  onClick?: () => void; // Optional click handler
+  avatarColor?: string;  // Optional color for the avatar background
+  onClick?: () => void;  // Optional click handler
 }
 
 const ClickableAvatar: React.FC<ClickableAvatarProps> = ({ sender, avatarPath, avatarColor, onClick, ...props }) => {
   const isClickable = sender === 'ChatGPT'; // Only ChatGPT avatar is clickable
+
+  // Define a glowing effect for the ChatGPT avatar
+  const glowStyle = isClickable ? {
+    boxShadow: `0 0 8px 2px ${avatarColor}`,  // Glow effect
+    borderColor: avatarColor
+  } : {};
 
   return (
     <Avatar
@@ -20,11 +26,11 @@ const ClickableAvatar: React.FC<ClickableAvatarProps> = ({ sender, avatarPath, a
       src={avatarPath}
       size="sm"
       {...props}
-      onClick={isClickable ? onClick : undefined} // Use onClick prop if provided and clickable
+      onClick={isClickable ? onClick : undefined}
       cursor={isClickable ? 'pointer' : 'default'}
       style={{
         backgroundColor: avatarColor,
-        borderColor: avatarColor // If border color needs to match background
+        ...glowStyle  // Apply the glowing effect conditionally
       }}
     />
   );

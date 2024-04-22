@@ -2,14 +2,8 @@
 "use client"
 
 import React from 'react';
-import { Avatar, AvatarProps } from '@chakra-ui/react';
-
-interface ClickableAvatarProps extends AvatarProps {
-  sender: 'You' | 'ChatGPT';
-  avatarPath: string;
-  avatarColor?: string;  // Optional color for the avatar background
-  onClick?: () => void;  // Optional click handler
-}
+import { Avatar } from '@chakra-ui/react';
+import { ClickableAvatarProps } from './types'
 
 const ClickableAvatar: React.FC<ClickableAvatarProps> = ({ sender, avatarPath, avatarColor, onClick, ...props }) => {
   const isClickable = sender === 'ChatGPT'; // Only ChatGPT avatar is clickable

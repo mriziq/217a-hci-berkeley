@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
 import { VStack, Text, HStack } from '@chakra-ui/react';
 import { format } from 'date-fns';
-import { Message } from './types';
+import { MessageDisplayProps } from './types';
 import ClickableAvatar from './avatar';
 import Sidebar from './sidebar'; // Ensure you have this Sidebar component
 
-interface MessageDisplayProps {
-  messages: Message[];
-  chatGPTColor: string;
-}
 
 const MessageDisplay: React.FC<MessageDisplayProps> = ({ messages, chatGPTColor }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);

@@ -3,11 +3,7 @@
 
 import React, { useState } from 'react';
 import { Textarea, Button, FormControl, FormLabel } from '@chakra-ui/react';
-
-interface PromptInputProps {
-  onSubmit: (prompt: string) => void;
-  isLoading: boolean;
-}
+import { PromptInputProps } from './types'
 
 const PromptInput: React.FC<PromptInputProps> = ({ onSubmit, isLoading }) => {
   const [prompt, setPrompt] = useState('');

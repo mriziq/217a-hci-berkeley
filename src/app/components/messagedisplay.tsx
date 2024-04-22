@@ -1,13 +1,17 @@
 // MessageDisplay.tsx
-"use client"
-
 import React from 'react';
 import { VStack, Text, HStack } from '@chakra-ui/react';
 import { format } from 'date-fns';
-import { Message } from './types';
+import { Message } from './types';  // Import your Message type definition
 import ClickableAvatar from './clickableavatar';
 
-const MessageDisplay = ({ messages, chatGPTColor }) => (
+// Define the type for the props expected by MessageDisplay
+interface MessageDisplayProps {
+    messages: Message[];  // Array of Message objects
+    chatGPTColor: string;  // Color string for ChatGPT avatar
+}
+
+const MessageDisplay: React.FC<MessageDisplayProps> = ({ messages, chatGPTColor }) => (
     <VStack
         p="4"
         bg="gray.50"

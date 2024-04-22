@@ -18,7 +18,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         const payload = {
             model: "gpt-3.5-turbo",
             messages: [
-                { role: "system", content: "You are a helpful." },
+                { role: "system", content: "You are ChatGPT, a GPT-3 model assistant by OpenAI." },
                 { role: "user", content: prompt },
                 { role: "system", content: `unique_param: ${uniqueParam}` },
             ],

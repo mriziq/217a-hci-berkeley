@@ -33,7 +33,7 @@ const PromptInput: React.FC<PromptInputProps> = ({ onSubmit, isLoading }) => {
       gap="3"
       width="full"
     >
-      <FormLabel htmlFor="prompt">Enter your prompt:</FormLabel>
+      <FormLabel htmlFor="prompt">Send Message</FormLabel>
       <Textarea
         id="prompt"
         value={prompt}
@@ -52,8 +52,9 @@ const PromptInput: React.FC<PromptInputProps> = ({ onSubmit, isLoading }) => {
         type="submit"
         disabled={isLoading}
         size="md"
+        width={"50%"}
       >
-        Send
+        Send Message
       </Button>
     </FormControl>
   );

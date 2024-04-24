@@ -34,7 +34,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         
         <Divider />
 
-        <Text fontSize="sm">These responses change and are based on the latest response.</Text>
+        <Text fontSize="sm">These assumptions change real-time and are based on the latest response.</Text>
         <WorldDisplay />
 
         {/* <Divider my={4} /> */}

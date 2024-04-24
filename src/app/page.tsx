@@ -50,7 +50,7 @@ const HomePage = () => {
       <HStack w="100%" justifyContent="space-between" p={5}>
         <Text textAlign={"left"}>School of Information @ UC Berkeley</Text>
         <Link href="https://www.github.com/mriziq/217a-hci-berkeley">
-          <span style={{ color: "blue", fontWeight: "normal" }}>Github</span>
+          <span style={{ color: "blue", fontWeight: "normal" }}>M.I.R.R.O.R&apos;s Github</span>
         </Link>
       </HStack>
       <Box p={5} className="chat">

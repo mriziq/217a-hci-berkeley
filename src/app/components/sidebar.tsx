@@ -39,8 +39,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
         {/* <Divider my={4} /> */}
 
-        <Heading size="lg">Status</Heading>
-        <MetricsDisplay/>
+        {/* <Heading size="lg">Status</Heading>
+        <MetricsDisplay/> */}
       
       </VStack>
     </Box>

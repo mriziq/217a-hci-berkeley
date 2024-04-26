@@ -1,0 +1,29 @@
+{
+  "metrics": [
+    {
+      "key": "gender",
+      "label": "Gender is Male",
+      "confidencePercentage": 92
+    },
+    {
+      "key": "age",
+      "label": "Age is between 21 - 25",
+      "confidencePercentage": 85
+    },
+    {
+      "key": "location",
+      "label": "Location is near Berkeley, CA",
+      "confidencePercentage": 78
+    }
+  ],
+  "aboutYou": [
+    {
+      "description": "Education Level",
+      "detail": "Post-Graduate"
+    },
+    {
+      "description": "Currently",
+      "detail": "Writing an essay"
+    }
+  ]
+}

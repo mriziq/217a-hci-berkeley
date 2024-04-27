@@ -12,7 +12,7 @@
     },
     {
       "key": "location",
-      "label": "Location is near Berkeley, CA",
+      "label": "Location is near San Francisco, CA",
       "confidencePercentage": 78
     }
   ],
@@ -23,7 +23,6 @@
     },
     {
       "description": "Currently",
-      "detail": "Writing an essay"
+      "detail": "Planning a date"
     }
-  ]
-}
+  ] 

@@ -2,24 +2,24 @@
   "metrics": [
     {
       "key": "gender",
-      "label": "Gender is Female",
+      "label": "Gender is Male",
       "confidencePercentage": 92
     },
     {
       "key": "age",
-      "label": "Age is between 18 - 23",
+      "label": "Age is between 20 - 25",
       "confidencePercentage": 85
     },
     {
       "key": "location",
-      "label": "Location is near Berkeley, CA",
+      "label": "Location is near San Francisco Bay Area, CA",
       "confidencePercentage": 78
     }
   ],
   "aboutYou": [
     {
       "description": "Education Level",
-      "detail": "Undergraduate"
+      "detail": "Post-Graduate"
     },
     {
       "description": "Currently",

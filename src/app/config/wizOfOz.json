@@ -2,7 +2,7 @@
   "metrics": [
     {
       "key": "gender",
-      "label": "Gender is Male",
+      "label": "Gender is Female",
       "confidencePercentage": 92
     },
     {
@@ -12,14 +12,14 @@
     },
     {
       "key": "location",
-      "label": "Location is near Los Angeles, CA",
+      "label": "Location is near Berkeley, CA",
       "confidencePercentage": 78
     }
   ],
   "aboutYou": [
     {
       "description": "Education Level",
-      "detail": "Post-Graduate"
+      "detail": "Undergraduate"
     },
     {
       "description": "Currently",

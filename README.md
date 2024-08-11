@@ -6,6 +6,12 @@ This project was developed by Amer Mriziq, Cynthia Chen, and Mingduo Zhao at UC 
 
 ## Getting Started
 
+Before running the project, create a `.env` file in the root and add your OpenAI API Key.
+
+```
+OPENAI_API_KEY=
+```
+
 To start using this project locally, you can run the development server with the following commands:
 
 ```bash

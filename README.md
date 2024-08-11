@@ -1,8 +1,17 @@
 # ChatGPT Clone with Experimental Dashboard
 
-This project is a [Next.js](https://nextjs.org/) application developed using [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), designed to emulate a single-thread interaction with ChatGPT. It features an experimental dashboard that reveals ChatGPT's assumptions, leveraging a "Wizard of Oz" prototype to explore AI transparency. You can read the associated paper [here](https://mirroreffect.mriziq.com).
+This project is a [Next.js](https://nextjs.org/) application developed using [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), designed to emulate ChatGPT with an integrated transparency dashboard. It features an experimental dashboard that reveals ChatGPT's assumptions, leveraging a "Wizard of Oz" prototype to explore AI transparency. 
 
+### Learn More
 This project was developed by Amer Mriziq, Cynthia Chen, and Mingduo Zhao at UC Berkeley's School of Information.
+
+You can read the  research behind this project in detailed here: [MIRROR Paper](https://mirroreffect.mriziq.com).
+
+## Features
+
+	•	Assumption Display: Shows the AI’s real-time assumptions about the user.
+	•	Wizard of Oz Prototype: Predefined assumptions simulate dynamic AI transparency.
+	•	"Check Engine" Reliability Avatar: Dashboard ins accessible via a clickable avatar, integrated smoothly within the chat.
 
 ## Getting Started
 

@@ -8,10 +8,9 @@ This project was developed by Amer Mriziq, Cynthia Chen, and Mingduo Zhao at UC 
 You can read the  research behind this project in detailed here: [MIRROR Paper](https://mirroreffect.mriziq.com).
 
 ## Features
-
-	•	Assumption Display: Shows the AI’s real-time assumptions about the user.
-	•	Wizard of Oz Prototype: Predefined assumptions simulate dynamic AI transparency.
-	•	"Check Engine" Reliability Avatar: Dashboard ins accessible via a clickable avatar, integrated smoothly within the chat.
+- Assumption Display: Shows the AI’s real-time assumptions about the user (the "user model").
+- Wizard of Oz Prototype: Predefined assumptions simulate AI's user model.
+- "Check Engine" Reliability Avatar: Dashboard is accessible via a clickable avatar. Change in color signals to users when to check dashboard.
 
 ## Getting Started
 
